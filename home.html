@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Home – ShidouCid Web</title>
+  <style>
+    :root{--red:#ff5252;--red-light:#ff6b6b;}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,Helvetica,sans-serif}
+    body{background:#0e0e0e;color:#fafafa;overflow-x:hidden}
+    .top-bar{position:fixed;top:0;left:0;right:0;height:64px;background:linear-gradient(135deg,var(--red-light),var(--red));box-shadow:0 4px 25px rgba(255,82,82,.35);display:flex;align-items:center;justify-content:space-between;padding:0 24px;z-index:999;backdrop-filter:blur(12px)}
+    .brand{font-size:22px;font-weight:700;color:#fff;text-transform:uppercase}
+    .profile-img{height:44px;width:44px;border-radius:4px;margin-right:12px;object-fit:cover}
+    .menu-toggle{display:flex;flex-direction:column;justify-content:space-between;width:24px;height:18px;cursor:pointer}
+    .menu-toggle span{height:2px;width:100%;background:#fff;border-radius:2px;transition:.3s}
+    .drawer{position:fixed;top:64px;right:-40%;width:40%;height:calc(100vh - 64px);background:#1a1a1a;border-left:1px solid #333;transition:right .4s ease;z-index:998;padding:32px 24px;display:flex;flex-direction:column;gap:20px}
+    .drawer.open{right:0}
+    .drawer-btn{display:flex;align-items:center;background:#fff;color:#0e0e0e;padding:12px 16px;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:transform .2s}
+    .drawer-btn:hover{transform:translateX(-4px)}
+    .drawer-btn img{width:28px;height:28px;border-radius:4px;margin-right:12px;object-fit:cover}
+    main{margin-top:64px;padding:60px 20px;display:flex;flex-direction:column;align-items:center;gap:28px;opacity:0;animation:fadeIn .8s ease forwards}
+    @keyframes fadeIn{to{opacity:1}}
+    .btn{background:#fff;color:#0e0e0e;padding:18px 40px;border:none;border-radius:12px;font-size:18px;font-weight:600;cursor:pointer;width:320px;max-width:90%;transition:transform .3s,box-shadow .3s;animation:slideUp .6s ease forwards;opacity:0;transform:translateY(30px)}
+    .btn:nth-child(3){animation-delay:.2s}.btn:nth-child(4){animation-delay:.35s}.btn:nth-child(5){animation-delay:.5s}
+    @keyframes slideUp{to{transform:translateY(0);opacity:1}}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(255,255,255,.2)}
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">ShidouCid Web</div>
+    <div style="display:flex;align-items:center;">
+      <img class="profile-img" src=img class="profile-img" src="https://i.ibb.co.com/G45S4Bw3/image.jpg" alt="Profile">
+
+      <div class="menu-toggle" onclick="toggleDrawer()"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <nav class="drawer" id="drawer">
+    <button class="drawer-btn" onclick="window.open('https://whatsapp.com/channel/0029VbAQiJK9MF95lJNCXM3I','_blank')"><img src="https://i.ibb.co.com/dRqb6M4/0b2caab8-f464-4540-b4cc-95a5308927e6.jpg" alt="WA">Saluran WA</button>
+    <button class="drawer-btn" onclick="window.open('https://www.tiktok.com/@cidshido','_blank')"><img src="https://i.ibb.co.com/4gn2k27r/f305f674-7fe9-4046-9f6f-8e418d3e42e2.jpg" alt="TT">Tiktok Shidou</button>
+    <button class="drawer-btn" onclick="window.open('https://www.youtube.com/channel/UC3OjMfX_ZJ-dpaa3uHjzi8g','_blank')"><img src="https://i.ibb.co.com/jPrmffTW/b4bbe7fa-3a83-4188-be5d-d8d261f7c8cb.jpg" alt="YT">YouTube Shidou</button>
+  </nav>
+
+  <main>
+    <h1>What's up! Bray😎</h1>
+    <p>mau nyari apa bray?</p>
+
+    <button class="btn" onclick="location.href='?open=menu1'">Riyan X Idlan IMUTIM Breaking news😱</button>
+    <button class="btn" onclick="location.href='?open=menu2'">IYWA DAN WAFI SEGS JOMOK😨</button>
+    <button class="btn" onclick="location.href='?open=menu3'">KABAR BARU IMU TEAM?</button>
+  </main>
+
+  <script>function toggleDrawer(){document.getElementById('drawer').classList.toggle('open')}</script>
+  <script>
+  const params = new URLSearchParams(location.search);
+  const target = params.get('open');
+  if (target === 'menu1') location.replace('menu1.html');
+  if (target === 'menu2') location.replace('menu2.html');
+  if (target === 'menu3') location.replace('menu3.html');
+</script>
+</body>
+</html>

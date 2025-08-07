@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu2 – ShidouCid Web</title>
+    <style>
+        :root{--red:#ff5252;--red-light:#ff6b6b;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,Helvetica,sans-serif}
+        body{background:#0e0e0e;color:#fafafa;overflow-x:hidden}
+
+        /* ===== HEADER ===== */
+        .top-bar{
+            position:fixed;top:0;left:0;right:0;height:64px;
+            background:linear-gradient(135deg,var(--red-light),var(--red));
+            box-shadow:0 4px 25px rgba(255,82,82,.35);
+            display:flex;align-items:center;justify-content:space-between;
+            padding:0 24px;z-index:999;backdrop-filter:blur(12px);
+        }
+        .brand{font-size:22px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#fff;text-shadow:0 0 8px rgba(255,255,255,.4)}
+        .profile-img{height:44px;width:44px;object-fit:cover;margin-right:12px}
+        .menu-toggle{display:flex;flex-direction:column;justify-content:space-between;width:24px;height:18px;cursor:pointer}
+        .menu-toggle span{height:2px;width:100%;background:#fff;border-radius:2px;transition:.3s}
+
+        /* ===== DRAWER ===== */
+        .drawer{
+            position:fixed;top:64px;right:-40%;width:40%;height:calc(100vh - 64px);
+            background:#1a1a1a;border-left:1px solid #333;
+            transition:right .4s ease;z-index:998;padding:32px 24px;
+            display:flex;flex-direction:column;gap:20px;
+        }
+        .drawer.open{right:0}
+        .drawer-btn{
+            display:flex;align-items:center;
+            background:#fff;color:#0e0e0e;
+            padding:12px 16px;border:none;border-radius:8px;
+            font-size:16px;font-weight:600;cursor:pointer;transition:transform .2s;
+        }
+        .drawer-btn:hover{transform:translateX(-4px)}
+        .drawer-btn img{width:28px;height:28px;border-radius:4px;margin-right:12px;object-fit:cover}
+
+        /* ===== CONTENT ===== */
+        main{
+            margin-top:64px;
+            padding:40px 20px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:24px;
+            max-width:720px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        h1{color:var(--red-light);text-align:center;font-size:26px;font-weight:700;line-height:1.3}
+        .main-img{width:100%;max-width:500px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+        .source{font-size:14px;color:#ccc}
+        .story{line-height:1.8;text-align:justify;color:#e5e5e5}
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="top-bar">
+        <div class="brand">ShidouCid Web</div>
+        <div style="display:flex;align-items:center;">
+            <img class="profile-img" src="https://i.ibb.co.com/gYm7h7P/Whats-App-Image-2025-08-07-at-18-19-42.jpg" alt="Profile">
+            <div class="menu-toggle" onclick="toggleDrawer()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== DRAWER ===== -->
+    <nav class="drawer" id="drawer">
+        <button class="drawer-btn" onclick="window.open('https://whatsapp.com/channel/0029VbAQiJK9MF95lJNCXM3I','_blank')">
+            <img src="https://i.ibb.co.com/dRqb6M4/0b2caab8-f464-4540-b4cc-95a5308927e6.jpg" alt="WA">
+            Saluran WA
+        </button>
+        <button class="drawer-btn" onclick="window.open('https://www.tiktok.com/@cidshido','_blank')">
+            <img src="https://i.ibb.co.com/4gn2k27r/f305f674-7fe9-4046-9f6f-8e418d3e42e2.jpg" alt="TikTok">
+            Tiktok Shidou
+        </button>
+        <button class="drawer-btn" onclick="window.open('https://www.youtube.com/channel/UC3OjMfX_ZJ-dpaa3uHjzi8g','_blank')">
+            <img src="https://i.ibb.co.com/jPrmffTW/b4bbe7fa-3a83-4188-be5d-d8d261f7c8cb.jpg" alt="YouTube">
+            YouTube Shidou
+        </button>
+    </nav>
+
+    <!-- ===== ARTICLE ===== -->
+    <main>
+        <h1>IYWA DAN WAFI SEGS HOMOK DI KAMAR OYO! 😨</h1>
+
+       <a href="https://ibb.co/HfH8f1vp">
+  <img class="main-img"
+       src="https://i.ibb.co/HfH8f1vp/Whats-App-Image-2025-08-07-at-17-31-49.jpg"
+       alt="Foto kejadian">
+</a>
+
+
+        <div class="source">source: ShidouCid</div>
+
+        <div class="story">
+            <p><strong>Jawa Timur</strong> – Dunia maya digemparkan oleh viralnya kabar mengejutkan tentang pasangan seleb TikTok, <strong>Iywa</strong> dan <strong>Wafi</strong>, yang diduga ketahuan melakukan "segs homok" di sebuah kamar hotel OYO di Jawa. Insiden ini langsung menjadi trending topik setelah beredarnya rekaman CCTV dan chat yang diduga kuat milik keduanya.</p>
+
+            <h3>Kronologi Malam Mencekam di Hotel OYO</h3>
+            <p>Seorang petugas kebersihan hotel secara tidak sengaja melihat pintu kamar terbuka dan mendengar suara aneh. Ia mengintip dan terkejut melihat Iywa dan Wafi dalam keadaan "tidak pantas".</p>
+            <blockquote>“Awalnya saya kira cuma tamu biasa, tapi kok ada suara aneh terus geraknya mencurigakan. Pas saya lihat, ternyata mereka berdua... Ya Allah, langsung saya laporkan ke manajer,” ujar sang petugas.</blockquote>
+
+            <h3>Penyelidikan Dipegang oleh Danz</h3>
+            <p>AKP <strong>Danz</strong>, penyidik kontroversial, menuturkan pihaknya telah mengamankan HP, tissue bekas, dan CCTV. “Kami sedang mendalami apakah ini murni hubungan pribadi atau ada unsur pemaksaan,” tegas Danz.</p>
+
+            <h3>Kapolres Nazx: “Akan Kami Usut Tuntas!”</h3>
+            <p><strong>Kombes Nazx</strong> memerintahkan investigasi intensif dan mengingatkan netizen agar tidak menyebarkan konten tidak senonoh.</p>
+
+            <h3>Reaksi Netizen</h3>
+            <p>Ribuan komentar membanjiri medsos. @GossipJawa_ menulis, <em>“Dari gaya bicaranya udah tahu mereka bukan sekadar teman.”</em></p>
+
+            <h3>Klarifikasi & Spekulasi</h3>
+            <p>Keluarga Wafi marah besar dan mengancam laporan. Beberapa sumber menyebut keduanya hanya konslet (konsultasi online) tapi kecapekan tidur bareng. Bukti visual yang beredar makin memperkeruh suasana.</p>
+
+            <h3>Bersambung…</h3>
+            <p>Tim investigasi masih mengumpulkan data. Simak update terbaru hanya di sini!<br><em>(Reporter: CID)</em></p>
+        </div>
+    </main>
+
+    <script>
+        function toggleDrawer(){document.getElementById('drawer').classList.toggle('open')}
+    </script>
+
+</body>
+</html>
